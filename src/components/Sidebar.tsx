@@ -196,25 +196,26 @@ export function Sidebar({ active, onNavigate, open, onClose }: SidebarProps) {
                 key={item.id}
                 onClick={() => handleNav(item.id)}
                 className={cn(
-                  "w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left transition-all cursor-pointer",
+                  "relative w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left transition-all cursor-pointer overflow-hidden",
                   "text-[13px] focus-visible:outline-none mb-1",
                   active === item.id
                     ? "bg-surface-3 text-ink font-medium border border-line-2"
                     : "text-ink-3 hover:bg-surface-2 hover:text-ink-2 border border-transparent",
                 )}
               >
+                {/* Active indicator bar */}
+                {active === item.id && (
+                  <span className="absolute left-0 top-0 bottom-0 w-[2px] bg-brand rounded-r-full" />
+                )}
                 <span
                   className={cn(
-                    "shrink-0 relative ",
+                    "shrink-0",
                     active === item.id ? "text-brand" : "",
                   )}
                 >
                   {item.icon}
                 </span>
                 {item.label}
-                {active === item.id && (
-                  <span className="absolute left-0 top-0 button-0 w-[2px] bg-brand rounded-r-full" />
-                )}
               </button>
             ))}
           </div>
