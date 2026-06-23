@@ -11,7 +11,8 @@ function BalanceRow({ cb }: { cb: ClaimableBalance }) {
   const [claimed, setClaimed] = useState(false);
   const [claimError, setClaimError] = useState<string | null>(null);
 
-  const assetCode = cb.asset.includes(":") ? cb.asset.split(":")[0] : cb.asset;
+  const rawCode = cb.asset.includes(":") ? cb.asset.split(":")[0] : cb.asset;
+  const assetCode = rawCode === "native" ? "XLM" : rawCode;
 
   async function handleClaim() {
     setClaiming(true);
@@ -53,7 +54,7 @@ function BalanceRow({ cb }: { cb: ClaimableBalance }) {
         </div>
       </div>
       {!claimed && (
-        <div className="flex flex-col items-end gap-1">
+        <div className="flex flex-col items-end gap-1.5 shrink-0">
           <Button
             size="sm"
             loading={claiming}
