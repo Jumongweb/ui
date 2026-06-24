@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import { describe, it, expect, vi, beforeAll, afterEach } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
 import { QRCode } from "./QRCode";
 
 describe("QRCode", () => {

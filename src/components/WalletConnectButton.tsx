@@ -1,5 +1,5 @@
-import { useSorokit } from "@/context/useSorokit";
 import { Button } from "@/components/ui/Button";
+import { useSorokit } from "@/context/useSorokit";
 import { truncateAddress } from "@/lib/utils";
 
 export function WalletConnectButton({

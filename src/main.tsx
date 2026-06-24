@@ -1,21 +1,24 @@
+import "./index.css";
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import { SorokitProvider } from "@/context/SorokitProvider";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
-import {
-  initClient,
-  type InvokeParams,
-  type SorokitClient as LocalSorokitClient,
-  type NetworkInfo,
-  type NetworkName,
-} from "@/lib/client";
 import {
   createSorokitClient,
   isOk,
   type SorokitClient as CoreSorokitClient,
 } from "sorokit-core";
+
+import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { SorokitProvider } from "@/context/SorokitProvider";
+import {
+  initClient,
+  type InvokeParams,
+  type NetworkInfo,
+  type NetworkName,
+  type SorokitClient as LocalSorokitClient,
+} from "@/lib/client";
+
+import App from "./App";
 
 /**
  * Create an adapter that wraps the sorokit-core client to match the expected interface.

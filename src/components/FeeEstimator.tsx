@@ -1,8 +1,9 @@
+import { Refresh01Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import { useCallback, useEffect, useState } from "react";
+
 import { getClient } from "@/lib/client";
 import { cn } from "@/lib/utils";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { Refresh01Icon } from "@hugeicons/core-free-icons";
 
 interface FeeData {
   baseFee: string;

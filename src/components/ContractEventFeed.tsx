@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { getClient } from "@/lib/client";
-import { Badge } from "@/components/ui/Badge";
-import { truncateAddress } from "@/lib/utils";
-import type { ContractEvent } from "@/lib/client";
-import { HugeiconsIcon } from "@hugeicons/react";
 import { Refresh01Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+import { Badge } from "@/components/ui/Badge";
+import type { ContractEvent } from "@/lib/client";
+import { getClient } from "@/lib/client";
+import { truncateAddress } from "@/lib/utils";
 
 const EVENT_TYPE_VARIANT: Record<
   string,

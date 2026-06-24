@@ -4,13 +4,13 @@
  */
 
 import type {
-  SorokitClient,
-  Balance,
   AccountData,
-  NetworkInfo,
-  Transaction,
+  Balance,
   ClaimableBalance,
   ContractEvent,
+  NetworkInfo,
+  SorokitClient,
+  Transaction,
 } from "./client";
 
 const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));

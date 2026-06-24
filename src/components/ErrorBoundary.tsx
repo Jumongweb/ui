@@ -1,6 +1,6 @@
-import { Component, type ErrorInfo, type ReactNode } from "react";
-import { HugeiconsIcon } from "@hugeicons/react";
 import { AlertCircleIcon, Refresh01Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Component, type ErrorInfo, type ReactNode } from "react";
 
 interface Props {
   children: ReactNode;

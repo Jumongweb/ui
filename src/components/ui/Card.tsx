@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+
 import { cn } from "@/lib/utils";
 
 const Card = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
@@ -97,9 +98,9 @@ CardFooter.displayName = "CardFooter";
 
 export {
   Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
 };

@@ -1,14 +1,15 @@
+import {
+  AlertCircleIcon,
+  CheckmarkCircle01Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import { useState } from "react";
-import { useSorokit } from "@/context/useSorokit";
+
+import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { Badge } from "@/components/ui/Badge";
+import { useSorokit } from "@/context/useSorokit";
 import { getClient, type TxResult } from "@/lib/client";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  CheckmarkCircle01Icon,
-  AlertCircleIcon,
-} from "@hugeicons/core-free-icons";
 
 type State = "idle" | "loading" | "success" | "error";
 
