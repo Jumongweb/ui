@@ -37,7 +37,7 @@ export function WalletConnectButton({
         <span className="sm:hidden">{isConnecting ? "…" : "Connect"}</span>
       </Button>
       {!isConnected && error && (
-        <div className="absolute top-[calc(100%+8px)] right-0 z-50 flex items-center gap-2 px-3 py-1.5 bg-surface border border-[rgba(239,68,68,0.15)] rounded-lg shadow-lg text-red text-[11px] whitespace-nowrap animate-in fade-in slide-in-from-top-1 duration-200">
+        <div className="absolute top-[calc(100%+8px)] right-0 z-50 flex items-center gap-2 px-3 py-1.5 bg-surface border border-error-dim rounded-lg shadow-lg text-red text-[11px] whitespace-nowrap animate-in fade-in slide-in-from-top-1 duration-200">
           <span>{error}</span>
           <button
             onClick={clearError}
