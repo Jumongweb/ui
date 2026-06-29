@@ -67,5 +67,10 @@ describe('Wallet flow integration', () => {
     // Click disconnect (the button appears when connected)
     fireEvent.click(screen.getByRole('button', { name: /Wallet connected/ }));
     expect(mockDisconnect).toHaveBeenCalledTimes(1);
+
+    // Ensure AccountCard is removed after disconnect
+    await waitFor(() => {
+      expect(screen.queryByText('Account')).not.toBeInTheDocument();
+    });
   });
 });

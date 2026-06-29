@@ -1,7 +1,7 @@
 import { deterministicMock } from './deterministic-mock';
 
-// Valid Stellar testnet address (56 characters, base32, starts with G)
-export const MOCK_ADDRESS = 'GCFXKLP2J5ZQSOXU6GJZQCE7S6ZVWSQPDE2XWP5RYLFW4C5Y5WJZ7A5';
+// Valid Stellar testnet address (56 characters, base32)
+export const MOCK_ADDRESS = 'G' + 'A'.repeat(55);
 
 // Deterministic mock data for reproducible tests
 export const MOCK_HISTORY = deterministicMock.generateMockHistory(5);
@@ -32,8 +32,9 @@ export function createMockClient(networkName?: string) {
   // Helper to build the result object for validation tests.
   const buildResult = (name?: string) => {
     if (name && !(name in NETWORKS)) {
-      // For unknown network names used in validation tests
-      return { data: null, error: `Unknown network: ${name}` };
+      // Include available network list in error for tests
+      const available = Object.keys(NETWORKS).join(', ');
+      return { data: null, error: `Unknown network: ${name}. Available networks: ${available}` };
     }
     const selected = name ? NETWORKS[name as keyof typeof NETWORKS] : NETWORKS.testnet;
     return { data: { network: selected }, error: null };
