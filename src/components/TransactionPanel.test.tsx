@@ -49,7 +49,7 @@ describe("TransactionPanel", () => {
     // Submit and check loading state
     fireEvent.click(submitBtn);
     expect(submitBtn).toBeDisabled();
-    expect(screen.getByRole("button", { name: "Submitting…" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Submitting…/ })).toBeInTheDocument();
 
     // Check success state
     expect(await screen.findByText("Transaction submitted")).toBeInTheDocument();
