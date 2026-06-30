@@ -1,4 +1,4 @@
-import { SorobanClient } from '@stellar/stellar-sdk';
+import { SorobanClient } from '@stellar/js-sdk';
 
 export interface ClientAdapterConfig {
   walletAdapter?: any; // Freighter, xBull, Albedo

@@ -28,9 +28,9 @@ export { ContractEventFeed } from './ContractEventFeed';
 export type { ContractEventFeedProps } from './ContractEventFeed';
 
 // Export providers and hooks
-export { SorokitProvider } from '../context/SorokitProvider';
-export { useSorokit } from '../context/useSorokit';
+export { SorokitProvider } from './providers/SorokitProvider';
+export { useClient } from './hooks/useClient';
 
 // Export types
 export type { SorokitClient } from '../lib/client';
-export type { Transaction, ContractEvent } from '../lib/client';
+export type { Transaction, ContractEvent } from '../lib/types';
