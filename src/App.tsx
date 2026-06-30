@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { ClientAdapter } from './lib/adapter'
 
 interface AppProps {
-  adapter: ClientAdapter
+  adapter: ClientAdapter;
 }
 
 function App({ adapter }: AppProps) {
